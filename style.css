@@ -139,10 +139,10 @@ ul.main-menu li a.active {
 
 video {}
 .container{
-    width: 200px;
+    width: 500px;
     overflow:hidden;
     display:block;
-    height: 360px;
+    height: 500px;
 }
 #glass{
     margin-left: -220px;
