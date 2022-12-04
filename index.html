@@ -157,13 +157,19 @@
             
             <h2>Simulation Techniques</h2>
             <p>
-              talk about Voronoi
+              When solving the hydrodynamic equations, there are two schools of thought, each of which has inherent strengths and weaknesses. 
+              One is the Lagrangian interpretation, wherein the fluid is modeled as a collection of particles which each trace out their 
+              own trajectory in space and time. The other is the Eulerian interpretation, where space is divided into a mesh and each mesh 
+              cell is responsible for the evolution of the fluid it contains. Recently, a hybrid method has been developed in an attempt to 
+              capture the strengths of both. This is the arbitrary Lagrangian-Eulerian methodology, or moving-mesh code for short. This method 
+              uses moving particles, around which are drawn mesh cells. This necessitates a way to contruct a mesh around an arbitrary distribution 
+              of points which can deform under the motion of such points. The use of a Voronoi tessellation provides both of these.
             </p>
             <!-- 350 x 350 -->
             <center>
               <figure>
                 <img src="moving_voronoi.gif" alt="Voronoi" width="300" height="auto">
-                <figcaption> Voronoi boi </figcaption>
+                <figcaption> Deformation of a Voronoi tessellation under the motion of its mesh-generating points. </figcaption>
               </figure>
             </center>
             <p>
@@ -175,7 +181,7 @@
               <source src="sliceanim.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
-            <figcaption> windy boi </figcaption>
+            <figcaption> Spherical boundary moving supersonically through air. </figcaption>
             </figure>
             </center>
             
