@@ -49,12 +49,10 @@
           
           <div id="Home" class="content-region hide">
             <p>
-              I am a theoretical astrophysicist interested in astrophysical fluids and how they 
+              Hello! I am a theoretical astrophysicist interested in astrophysical fluids and how they 
               can be modeled by numerical hydrodynamics. I particularly focus on stellar collisions, 
               as they provide an avenue to study unsolved phenomena such as the formation of black hole 
-              binaries. My tool of choice for these studies is moving-mesh hydrodynamics, in which the 
-              properties of a fluid are solved on a grid which can move and deform along with the fluid. 
-              I'm an active developer of the moving-mesh code 
+              binaries. I'm an active developer of the moving-mesh code 
               <a href="https://ui.adsabs.harvard.edu/abs/2017MNRAS.471.3577C/abstract">MANGA</a> 
               and a member of the <a href="https://nbody.shop/">N-Body Shop</a> collaboration.
             </p>
@@ -72,7 +70,7 @@
             </p>
             <p>
               Check out my <a href="https://github.com/ljprust">Github</a>, <a href="https://orcid.org/0000-0002-7174-8273">ORCiD</a>, and 
-              <a href="https://academictree.org/physics/tree.php?pid=896347">Physics Tree</a>!
+              <a href="https://academictree.org/physics/tree.php?pid=896347">Physics Tree</a> pages!
             </p>
             <center>
               <!-- mp4 is 1275 x 700, so if we scale to height=400 then width=728.6, so each margin is 164.3 wide -->
@@ -89,8 +87,8 @@
             <p>
               Common envelope evolution (CEE) is a phase in the life of a binary star system in which a giant star shares its gaseous 
               envlope with a small companion object, such as a main sequence star or white dwarf. This results in the ejection of some or all 
-              of the envelope, causing the binary to tighten to a fraction of its initial separation. This process is thought to play a role in 
-              the formation of many systems of interest to astronomers, including:
+              of the envelope, causing the binary to tighten to a fraction of its initial separation. This process plays a role in 
+              the formation of many objects of interest to astronomers, including:
               <ul>
                 <li>double white dwarfs</li>
                 <li>X-ray binaries</li>
@@ -99,10 +97,9 @@
                 <li>progenitors of type Ia supernovae</li>
                 <li>planetary nebulae</li>
               </ul>
-              However, direct observations of CEE are scarce due to the fact that such events are brief relative to the lifetime of a star 
-              and are much dimmer than supernovae. On the other hand, theoretical studies of CEE are hampered 
+              Direct observations of CEE are scarce, and paper-and-pencil calculations are hampered 
               by the many types of physics which must be taken into consideration, such as convection, accretion, radiation, self-gravity, 
-              recombination, jets, and magnetism, among others. Thus, we turn to 3-D hydrodynamic simulations to study the common envelope phase. 
+              recombination, jets, and magnetism, among others. Luckily, 3-D hydrodynamic simulations come to the rescue! 
             </p>
             <center>
             <figure>
@@ -115,17 +112,17 @@
             </center>
             <p>
               We carry out simulations of the common envelope phase using the moving-mesh code 
-              <a href="https://ui.adsabs.harvard.edu/abs/2017MNRAS.471.3577C/abstract">MANGA</a>. The main goals of these calculations are 
+              <a href="https://ui.adsabs.harvard.edu/abs/2017MNRAS.471.3577C/abstract">MANGA</a>. Our main goals are 
               to determine the efficiency with which the envelope is ejected and to find a mapping from the initial separation of the binary to 
-              its final state. The stellar evolution code <a href="https://docs.mesastar.org/en/release-r22.11.1/">MESA</a> has been extremely useful 
-              both in determining the initial structure of the giant star as well as in providing an accurate equation of state for modeling the gas.
+              its final state. We use the stellar evolution code <a href="https://docs.mesastar.org/en/release-r22.11.1/">MESA</a> 
+              both to determine the initial structure of the giant and to get an equation of state for the gas.
             </p>
             
             <h2>Magnetohydrodynamics</h2>
             <p>
               Magnetic fields are important in many areas of astrophysics, such as in the dynamics of accretion disks as well as the 
-              formation of jets. The magnetic can often be treated as being "frozen into" the fluid (i.e. the diffusion of field lines 
-              through the fluid is neglected), so that the motion of the fluid can cause the field lines to twist and turn. 
+              formation of jets. The magnetic can often be treated as being "frozen into" the fluid, 
+              so that the motion of the fluid can cause the field lines to twist and turn. 
               The presence of the field also introduces new types of wave motion in the fluid, such as magnetosonic and Alfven waves.
             </p>
             <center>
@@ -139,13 +136,14 @@
             </center>
             <p>
               Magnetic fields can be implemented into hydrodynamic solvers by adding a few terms into the governing equations. However, numerical 
-              errors can lead to the formation of magnetic monopoles, violating Gauss's law of magnetism. Several techniques have been developed to 
-              combat these monopoles by damping them or smoothing them out.
+              errors can lead to the formation of magnetic monopoles, violating Gauss's law of magnetism. I work on developing techniques to 
+              combat these monopoles by either damping them or smoothing them out.
             </p>
             <p>
               As mentioned above, magnetism is thought to play a role in common envelope evolution. Though not dynamically important over small 
               timescales, magnetic pressure can shape the ejecta from a CE event over the course of many years. This phenomenon is thought to 
-              be responsible for the bipolar shape of the Calabash Nebula, where the two plumes are observed to be threaded by magnetic field lines.
+              be responsible for the bipolar plumes of the Calabash Nebula. 
+              Our magnetohydrodynamic solvers have shown the formation of the toroidal magnetic fields thought to drive these outflows.
             </p>
             <!-- 1280 x 1175 -->
             <center>
