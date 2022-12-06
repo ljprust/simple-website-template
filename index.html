@@ -156,10 +156,8 @@
             <h2>Simulation Techniques</h2>
             <p>
               When solving the hydrodynamic equations, there are two schools of thought, each of which has inherent strengths and weaknesses. 
-              One is the Lagrangian interpretation, wherein the fluid is modeled as a collection of particles which each trace out their 
-              own trajectory in space and time. The other is the Eulerian interpretation, where space is divided into a mesh and each mesh 
-              cell is responsible for the evolution of the fluid it contains. Recently, a hybrid method has been developed in an attempt to 
-              capture the strengths of both. This is the arbitrary Lagrangian-Eulerian methodology, or moving-mesh code for short. This method 
+              The Lagrangian interpretation models the fluid as a collection of particles, while the Eulerian interpretation divides 
+              the space into a mesh. The moving-mesh method has been developed with the goal of combining the strengths of both. This method 
               uses moving particles, around which are drawn mesh cells, leveraging the superior shock capturing and spatial resolution of Eulerian 
               methods while avoiding grid effects such as preferred axes and difficulties with bulk advection. The use of a Voronoi tessellation 
               provides a mesh which can be drawn around an arbitrary distribution of points.
