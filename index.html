@@ -158,9 +158,9 @@
               When solving the hydrodynamic equations, there are two schools of thought, each of which has inherent strengths and weaknesses. 
               The Lagrangian interpretation models the fluid as a collection of particles, while the Eulerian interpretation divides 
               the space into a mesh. The moving-mesh method has been developed with the goal of combining the strengths of both. This method 
-              uses moving particles, around which are drawn mesh cells, leveraging the superior shock capturing and spatial resolution of Eulerian 
+              draws a dynamic mesh around a set of moving particles, leveraging the superior shock capturing and spatial resolution of Eulerian 
               methods while avoiding grid effects such as preferred axes and difficulties with bulk advection. The use of a Voronoi tessellation 
-              provides a mesh which can be drawn around an arbitrary distribution of points.
+              provides a deformable mesh.
             </p>
             <!-- 350 x 350 -->
             <center>
@@ -172,7 +172,7 @@
             <p>
               The presence of an inner boundary condition, such as a reflection or accretion boundary, is desirable for a variety of studies. 
               The use of a moving mesh allows us to contruct a boundary which moves throughout the simulation domain, possibly in response to 
-              gravitational or hydrodynamic forces. This is useful, for example, in treating an object which is far denser than the surrounding medium.
+              gravitational or hydrodynamic forces.
             </p>
             <center>
             <figure>
@@ -195,9 +195,9 @@
             <p>
               Similar to common envelope evolution, it is also possible for an expanding giant star to engulf one or more of its planets. 
               Very massive planets can potentially eject a significant portion of the envelope, but typically the result is the destruction 
-              of the planet and a temporary increase in the radius and luminosity of the giant. The outcome is determined by the dynamics of the 
-              spiral-in, which depends on the accretion physics at the surface of the planet. In particular, the drag force on the planet is affected 
-              by the bow shock upstream of the planet as well as the accretion column and vortices that form downstream.
+              of the planet and a temporary increase in the radius and luminosity of the giant. The outcome is determined by 
+              the fluid dynamics near the planet's surface, such as the bow shock upstream of the planet as well as the 
+              accretion column and vortices that form downstream.
             </p>
             <!-- 640 x 480 -->
             <center>
