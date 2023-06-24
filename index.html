@@ -178,6 +178,34 @@
             </figure>
             </center>
            -->
+
+            <h2>Hydrodynamic Accretion</h2>
+            <p>
+              Compact objects moving though a gaseous medium accrete both mass and momentum from their surroundings. 
+              Knowledge of these accretion rates is important for understanding the growth and dynamics of objects 
+              such as black holes and neutron stars. 
+            </p>
+            <center>
+              <figure>
+                <img src="machaccretion.jpg" alt="axisymmetric accretion" width="500" height="auto">
+                <figcaption> Axisymmetric accretion onto a compact object for a gas with a gamma law of 4/3. </figcaption>
+              </figure>
+            </center>
+            <p>
+              We study hydrodynamic accretion using the adaptive mesh refinement code 
+              <a href="https://www.athena-astro.app/">Athena++</a> and the moving-mesh code 
+              <a href="https://arepo-code.org/">Arepo</a>. We find that the convergence of the streamlines 
+              near the accretor creates pressure gradients which partially support the gas against gravity, 
+              resulting in a pseudo-hydrostatic halo. The gamma law of the gas is important in 
+              characterizing the properties of the accretion flow: for gamma<5/3, the flow becomes 
+              supersonic before reaching the surface of the accretor, whereas for gamma=5/3 the sonic line forms 
+              right at the surface. The special case of 5/3 also has the useful property that the mass accretion 
+              rate is uniquely determined by the gas entropy. This means that for subsonic flow, where there are 
+              no shocks present, the accretion rate is independent of the object's velocity. 
+              When the object is supersonic, the mass accretion drops due to an increase in entropy at the bow 
+              shock. Furthermore, the entropy gradients produced by the bow shock cause denser, lower entropy material 
+              to be accreted from the back of the object, giving it a net thrust forward.
+            </p>
             
             <h2>Magnetohydrodynamics</h2>
             <p>
