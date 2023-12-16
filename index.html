@@ -136,7 +136,7 @@
               one or more of its inner planets. 
               The planet spirals into the giant due to drag, ultimately leading to its destruction and a temporary increase in the size and luminosity of the giant. 
               We use the adaptive mesh refinement code 
-              <a href="https://www.athena-astro.app/">Athena++</a> to perform "wind-tunnel" simulations of the hydrodynamic interactions between the planet and surrounding envelope.
+              <a href="https://www.athena-astro.app/">Athena++</a> to perform "wind-tunnel" simulations of the interaction between the planet and surrounding envelope.
             </p>
           <!--
            <center>
@@ -186,10 +186,10 @@
               Once the forward shock has swept up a significant amount of mass, a reverse shock travels backward though the ejecta. 
               The shell of material between these shocks experiences Rayleigh-Taylor instabilities, creating turbulence which leads to synchrotron emission in the radio band. 
               If the star lost mass prior to its supernova (through winds, binary interactions, 
-              or other means), the CSM will be overdense, which we can implicitly measure with radio observations. One such supernova is 1993J, a red 
+              or other means), the CSM will be overdense, which we can implicitly measure with radio observations. One such supernova is SN 1993J, a red 
               supergiant which lost almost its entire hydrogen envelope prior to exploding.
             </p>
-            <center>
+<!--             <center>
             <figure>
             <video width="650" height="auto" autoplay loop muted>
               <source src="93jprettymc.mp4" type="video/mp4">
@@ -197,9 +197,15 @@
             </video>
             <figcaption> 1993J supernova remnant modeled using <a href="https://github.com/duffell/RT1D">RT1D</a> with a dense uniform CSM. </figcaption>
             </figure>
+            </center> -->
+            <center>
+              <figure>
+                <img src="93jcomparison.png" alt="simulation and observation comparison" width="500" height="auto">
+                <figcaption>Comparison of <a href="https://github.com/duffell/RT1D">RT1D</a> simulations of SN 1993J with radio interferometry data.</figcaption>
+              </figure>
             </center>
             <p>
-              The 30 years of observational data on 1993J can be compared to numerical models to better understand the structure of the CSM,
+              The 30 years of observational data on SN 1993J can be compared to numerical models to better understand the structure of the CSM,
               and thus the mechanism of mass loss. To this end, we use 1-D hydrodynamics to track the evolution of the remnant with various CSM models. 
               Though Rayleigh-Taylor instabilities are inherently absent in one-dimensional calculations, 3-D models have been used to train the moving-mesh code 
               <a href="https://github.com/duffell/RT1D">RT1D</a> on how the instability will manifest in 1-D.
@@ -207,25 +213,26 @@
 
             <h2>Bondi-Hoyle Accretion</h2>
             <p>
-              Objects moving though a gaseous medium accrete both mass and momentum from their surroundings, 
-              and knowledge of these accretion rates is important for understanding the growth and dynamics of a variety of objects.
-              The rates for static or highly-supersonic accretors are well known, whereas for intermediate velocities 
+              Objects moving though a gaseous medium accrete matter from their surroundings, 
+              and knowledge of the accretion rate is important for understanding the growth and dynamics of a variety of objects.
+              The rates for static or highly-supersonic accretors are well-known, whereas for intermediate velocities 
               we are left with interpolations between these known solutions. 
-              We study hydrodynamic accretion using the adaptive mesh refinement code 
+              We study accretion at such velocities using the adaptive mesh refinement code 
               <a href="https://www.athena-astro.app/">Athena++</a> and the moving-mesh code 
               <a href="https://arepo-code.org/">Arepo</a>.
             </p>
             <center>
               <figure>
                 <img src="machaccretion.png" alt="axisymmetric accretion" width="500" height="auto">
-                <figcaption> Axisymmetric accretion onto a compact object for a gas with a gamma law of 4/3. </figcaption>
+                <figcaption> Axisymmetric accretion onto a compact object in <a href="https://www.athena-astro.app/">Athena++</a>. </figcaption>
               </figure>
             </center>
             <p>
               We find that moving accretors which are small relative to their sphere of gravitational influence (e.g. black holes), 
+              deflection of the flow due to gravity and pressure gradients ensure that 
               the streamlines entering the accretor are essentially radial. Thus, the accreton rate is equal to that of a static accretor, 
-              which depends only on the entropy of the accreted gas. This has the surprising consequence that the accretion rate is 
-              independent of velocity for black holes which are moving subsonically. For supersonic motion, shock waves are present which 
+              depending only on the entropy of the accreted gas. This has the surprising consequence that the rate is 
+              independent of Mach number for black holes which are moving subsonically. For supersonic motion, shock waves are present which 
               raise the gas entropy, lowering the accretion rate.
             </p>
             
