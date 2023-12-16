@@ -153,8 +153,8 @@
           <center> <!-- 1676 x 935 -->
               <figure>
                 <img src="etagrid.png" alt="Flow Morphology" width="650" height="auto">
-                <figcaption> Gas density <i>(top)</i> and Mach number <i>(bottom)</i> for a planet with low mass <i>(left),</i> 
-                  intermediate mass <i>(middle),</i> and high mass <i>(right)</i>. </figcaption>
+                <figcaption> Gas density <i>(top)</i> and Mach number <i>(bottom)</i> for a planet moving through the inner <i>(left)</i> 
+                  and outer <i>(right)</i> envelope and at the transition point <i>(center)</i>. </figcaption>
               </figure>
             </center>
           
@@ -182,11 +182,11 @@
 
             <h2>Supernova Remnants</h2>
             <p>
-              When a star goes supernova, it launches several solar masses of ejecta, shocking the surrounding interstellar medium (ISM). 
-              Once the forward shock has swept up a significant amount of mass from the ISM, a reverse shock travels backward though the ejecta. 
-              The shell of material between the forward and reverse shocks experiences Rayleigh-Taylor instabilities, which stir the gas and 
-              create MHD turbulence, leading to synchrotron emission. If the star lost mass prior to its supernova (through winds, binary interactions, 
-              or other means), the circumstellar material (CSM) will be overdense, altering the positions of the shocks. One such supernova is 1993J, a red 
+              When a star goes supernova, it launches ejecta which shocks the surrounding circumstellar medium (CSM). 
+              Once the forward shock has swept up a significant amount of mass, a reverse shock travels backward though the ejecta. 
+              The shell of material between these shocks experiences Rayleigh-Taylor instabilities, creating turbulence which leads to synchrotron emission in the radio band. 
+              If the star lost mass prior to its supernova (through winds, binary interactions, 
+              or other means), the CSM will be overdense, which we can implicitly measure with radio observations. One such supernova is 1993J, a red 
               supergiant which lost almost its entire hydrogen envelope prior to exploding.
             </p>
             <center>
@@ -201,15 +201,17 @@
             <p>
               The 30 years of observational data on 1993J can be compared to numerical models to better understand the structure of the CSM,
               and thus the mechanism of mass loss. To this end, we use 1-D hydrodynamics to track the evolution of the remnant with various CSM models. 
-              Though Rayleigh-Taylor instabilities are inherently absent in one-dimensional calculations, 2-D models have been used to train the moving-mesh code 
+              Though Rayleigh-Taylor instabilities are inherently absent in one-dimensional calculations, 3-D models have been used to train the moving-mesh code 
               <a href="https://github.com/duffell/RT1D">RT1D</a> on how the instability will manifest in 1-D.
             </p>
 
-            <h2>Hydrodynamic Accretion</h2>
+            <h2>Bondi-Hoyle Accretion</h2>
             <p>
-              Compact objects moving though a gaseous medium accrete both mass and momentum from their surroundings. 
-              Knowledge of these accretion rates is important for understanding the growth and dynamics of objects 
-              such as black holes and neutron stars.  We study hydrodynamic accretion using the adaptive mesh refinement code 
+              Objects moving though a gaseous medium accrete both mass and momentum from their surroundings, 
+              and knowledge of these accretion rates is important for understanding the growth and dynamics of a variety of objects.
+              The rates for static or highly-supersonic accretors are well known, whereas for intermediate velocities 
+              we are left with interpolations between these known solutions. 
+              We study hydrodynamic accretion using the adaptive mesh refinement code 
               <a href="https://www.athena-astro.app/">Athena++</a> and the moving-mesh code 
               <a href="https://arepo-code.org/">Arepo</a>.
             </p>
@@ -220,17 +222,11 @@
               </figure>
             </center>
             <p>
-              We find that the convergence of the streamlines 
-              near the accretor creates pressure gradients which partially support the gas against gravity, 
-              resulting in a pseudo-hydrostatic halo. The gamma law of the gas is important in 
-              characterizing the properties of the accretion flow: for gamma<5/3, the flow becomes 
-              supersonic before reaching the surface of the accretor, whereas for gamma=5/3 the sonic line forms 
-              right at the surface. The special case of 5/3 also has the useful property that the mass accretion 
-              rate is uniquely determined by the gas entropy. This means that for subsonic flow, where there are 
-              no shocks present, the accretion rate is independent of the object's velocity. 
-              When the object is supersonic, the mass accretion drops due to an increase in entropy at the bow 
-              shock. Furthermore, the entropy gradients produced by the bow shock cause denser, lower entropy material 
-              to be accreted from the back of the object, giving it a net thrust forward.
+              We find that moving accretors which are small relative to their sphere of gravitational influence (e.g. black holes), 
+              the streamlines entering the accretor are essentially radial. Thus, the accreton rate is equal to that of a static accretor, 
+              which depends only on the entropy of the accreted gas. This has the surprising consequence that the accretion rate is 
+              independent of velocity for black holes which are moving subsonically. For supersonic motion, shock waves are present which 
+              raise the gas entropy, lowering the accretion rate.
             </p>
             
             <h2>Magnetohydrodynamics</h2>
