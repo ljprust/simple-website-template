@@ -91,8 +91,8 @@
             <h2>Common Envelope Evolution</h2>
             <p>
               Common envelope evolution (CEE) is a phase in the life of a binary star system in which a giant star shares its gaseous 
-              envelope with a small companion object, such as a main sequence star or white dwarf. This results in the ejection of some or all 
-              of the envelope, causing the binary to tighten to a fraction of its initial separation. This process plays a role in 
+              envelope with a small companion object, such as a main sequence star or white dwarf. This ejects some or all 
+              of the envelope, tightening the binary to a fraction of its initial separation. This process plays a role in 
               the formation of many objects of interest to astronomers, including:
               <ul>
                 <li>double white dwarfs</li>
@@ -112,14 +112,14 @@
               <source src="adsm.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
-            <figcaption> Simulation of a red giant enveloping its smaller binary companion. </figcaption>
+            <figcaption> Simulation of a red giant enveloping its smaller companion. </figcaption>
             </figure>
             </center>
             <p>
               We carry out simulations of the common envelope phase using the moving-mesh code 
-              <a href="https://ui.adsabs.harvard.edu/abs/2017MNRAS.471.3577C/abstract">MANGA</a>. Our main goals are 
-              to determine the efficiency with which the envelope is ejected and to find a mapping from the initial separation of the binary to 
-              its final state. The stellar evolution code <a href="https://docs.mesastar.org/en/release-r22.11.1/">MESA</a> is used 
+              <a href="https://ui.adsabs.harvard.edu/abs/2017MNRAS.471.3577C/abstract">MANGA</a>, with the goal of determining  
+              the efficiency with which the envelope is ejected and to find a mapping from the initial state of the binary to 
+              its final separation. The stellar evolution code <a href="https://docs.mesastar.org/en/release-r22.11.1/">MESA</a> is used 
               both to determine the initial structure of the giant and to get an equation of state for the gas.
             </p>
           
@@ -134,10 +134,9 @@
             <p>
               Similar to common envelope evolution, it is also possible for a post-main sequence star ascending the giant branch to engulf 
               one or more of its inner planets. 
-              Very massive planets can potentially eject a significant portion of the envelope, but typically the outcome is the destruction 
-              of the planet and a temporary increase in the size and luminosity of the giant. To understand these engulfments, 
-              it is important to study the hydrodynamic interactions between the planet and the surrounding envelope. We use the adaptive mesh refinement code 
-              <a href="https://www.athena-astro.app/">Athena++</a> to perform "wind-tunnel" simulations of the immediate vicinity of the planet.
+              The planet spirals into the giant due to drag, ultimately leading to its destruction and a temporary increase in the size and luminosity of the giant. 
+              We use the adaptive mesh refinement code 
+              <a href="https://www.athena-astro.app/">Athena++</a> to perform "wind-tunnel" simulations of the hydrodynamic interactions between the planet and surrounding envelope.
             </p>
           <!--
            <center>
@@ -162,13 +161,10 @@
            <p>
              The flow around an engulfed planet depends largely on the ability of its gravitational pull to accrete stellar material 
              against the immense ram pressure from the oncoming fluid. 
-             For low-mass planets, the flow morphology resembles that of the non-gravitating case: 
-             a bow shock forms near the surface of the planet, with a recompression shock and separation bubble on the trailing edge.
-             If we increase the mass of the planet, gravity is strong enough to collect material on its trailing edge, 
-             causing the separation bubble to grow in size and cover much of the planet's surface. This forces the recompression shock 
-             forward, possibly intersecting with the bow shock. Beyond a critical mass, the bubble completely envelops the planet, 
-             cloaking it in a spherically-symmetric, hydrostatic halo. Because planets tend to speed up (and possibly lose mass) as they 
-             spiral into the giant, the flow morphology generally begins in the halo limit and gradually transitions toward the low-gravity limit.
+             When the planet is in the outer envelope, gravity is strong enough to cloak the planet in a pseudo-hydrostatic halo of gas adorned by a bow shock. 
+             But as it spirals in and speeds up, this halo is gradually stripped off and the bow shock moves inward toward the planet surface until an abrupt transition takes place. 
+             Here a recompression shock forms behind the planet, deflecting the flow outward and creating a low-density separation bubble behind the planet. 
+             We find that these two distinct morphologies are also described by different models for the drag experienced by the planet due to both ram pressure and dynamical friction. 
            </p>
           
           <!--
