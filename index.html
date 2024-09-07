@@ -273,10 +273,8 @@
             <p>
               When solving the hydrodynamic equations, there are two schools of thought, each of which has inherent strengths and weaknesses. 
               The Lagrangian interpretation models the fluid as a collection of particles, while the Eulerian interpretation divides 
-              the space into a mesh. The moving-mesh method has been developed with the goal of combining the strengths of both. This method 
-              draws a dynamic mesh around a set of moving particles, leveraging the superior shock capturing and spatial resolution of Eulerian 
-              methods while avoiding grid effects such as preferred axes and difficulties with bulk advection. The use of a Voronoi tessellation 
-              provides a deformable mesh.
+              the space into a mesh. The moving-mesh method has been developed with the goal of combining the strengths of both, using a Voronoi 
+              tessellation to draw a dynamic mesh around a set of moving particles.
             </p>
             <!-- 350 x 350 -->
             <center>
@@ -308,7 +306,7 @@
             <center>
               <figure>
                 <img src="mesh000240.png" alt="Voronoi mesh for planetary engulfment" width="600" height="auto">
-                <figcaption> A snapshot of the Voronoi mesh in a planetary engulfment study. </figcaption>
+                <figcaption> A snapshot of the Voronoi mesh containing a moving boundary. </figcaption>
               </figure>
             </center>
             
