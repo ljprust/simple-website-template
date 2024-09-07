@@ -176,14 +176,26 @@
             </center>
            -->
 
-            <h2>Supernova Remnants</h2>
+            <h2>Supernova Remnants (Type IIb)</h2>
             <p>
-              When a star goes supernova, it launches ejecta which shocks the surrounding circumstellar medium (CSM). 
-              Once the forward shock has swept up a significant amount of mass, a reverse shock travels backward though the ejecta. 
+              When a star goes supernova, it launches a forward shock into the surrounding circumstellar medium (CSM)
+              and sends a reverse shock backward though the ejecta. 
               The shell of material between these shocks experiences Rayleigh-Taylor instabilities, creating turbulence which leads to synchrotron emission in the radio band. 
-              If the star lost mass prior to its supernova (through winds, binary interactions, 
-              or other means), the CSM will be overdense, which we can implicitly measure with radio observations. One such supernova is SN 1993J, a red 
-              supergiant which lost almost its entire hydrogen envelope prior to exploding.
+              SNIIb are a subclass of supernovae which have lost most of their hydrogen envelope prior to exploding due to winds or binary interactions, and thus have a dense CSM. 
+              One such supernova is SN 1993J, which has been observed over a period of 30 years and can be compared to theoretical models to better understand 
+              the structure of the CSM and thus the mechanism of mass loss. To this end, we model SN 1993J using the 1-D hydrodynamics code 
+              <a href="https://github.com/duffell/RT1D">RT1D</a>, which has been calibrated to include the effects of 3-D turbulence.
+            </p>
+            <center>
+              <figure>
+                <img src="simulation_comparison3.png" alt="simulation and observation comparison" width="500" height="auto">
+                <figcaption>Comparison of <a href="https://github.com/duffell/RT1D">RT1D</a> simulations of SN 1993J with radio interferometry data.</figcaption>
+              </figure>
+            </center>
+
+            <h2>Supernova Remnants (Type Ia)</h2>
+            <p>
+              
             </p>
             <center>
             <figure>
@@ -194,19 +206,8 @@
             <figcaption> 1993J supernova remnant modeled using <a href="https://github.com/duffell/RT1D">RT1D</a> with a dense uniform CSM. </figcaption>
             </figure>
             </center>
-            <!--
-            <center>
-              <figure>
-                <img src="simulation_comparison3.png" alt="simulation and observation comparison" width="500" height="auto">
-                <figcaption>Comparison of <a href="https://github.com/duffell/RT1D">RT1D</a> simulations of SN 1993J with radio interferometry data.</figcaption>
-              </figure>
-            </center>
-            -->
             <p>
-              The 30 years of observational data on SN 1993J can be compared to numerical models to better understand the structure of the CSM,
-              and thus the mechanism of mass loss. To this end, we use 1-D hydrodynamics to track the evolution of the remnant with various CSM models. 
-              Though Rayleigh-Taylor instabilities are inherently absent in one-dimensional calculations, 3-D models have been used to train the moving-mesh code 
-              <a href="https://github.com/duffell/RT1D">RT1D</a> on how the instability will manifest in 1-D.
+              
             </p>
 
             <h2>Bondi-Hoyle Accretion</h2>
